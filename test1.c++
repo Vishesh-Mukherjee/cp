@@ -14,10 +14,13 @@ void printArray(int *arr, int a, int b) {
 int main() {
 	int arr[] = {1, 5, 2, 4, 3};
 	int n = sizeof(arr)/sizeof(int);
+	int count = 0;
 	for (int i = 0; i < n; i ++) {
 		for (int j = i; j < n; j ++) {
 			printArray(arr, i, j);
+			count ++;
 		}
 	}
+	cout << "Subarray count: " << count << endl;
 }
 
